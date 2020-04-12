@@ -369,7 +369,14 @@ open class LGButton: UIControl {
     
     // MARK: - Overrides
     // MARK:
-    override init(frame: CGRect) {
+    public init() {
+        super.init(frame: CGRect())
+        registIconFont()
+        xibSetup()
+        setupView()
+    }
+
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         registIconFont()
         xibSetup()
